@@ -2,15 +2,8 @@
   <base-page/>
 </template>
 
-<script>
+<script setup>
 import BasePage from './components/BasePage.vue'
-
-export default {
-  name: 'App',
-  components: {
-    BasePage
-  }
-}
 
 </script>
 
