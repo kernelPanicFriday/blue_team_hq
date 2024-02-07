@@ -1,9 +1,9 @@
 <template>
-  <base-page/>
+  <RouterView/>
 </template>
 
 <script setup>
-import BasePage from './components/BasePage.vue'
+import { RouterView } from "vue-router";
 
 </script>
 
