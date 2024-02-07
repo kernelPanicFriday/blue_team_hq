@@ -1,8 +1,11 @@
 <template>
-    <header class="bg-gray-600">
+    <header class="bg-rose-500">
         <nav>
-            <div class="flex flex-auto">
-                <a href='#' v-for="(link, idx) in links" :key="idx">{{ link }}</a>
+
+            <div class="flex justify-end gap-2">
+                    <router-link class="hover:text-stone-500 transition-colors" v-for="link in links" :key="link.url" :to="{path: link.path}">
+                        {{ link.name }}
+                    </router-link>
             </div>
         </nav>    
     </header>
@@ -10,9 +13,7 @@
 
 <script setup>
 import { reactive } from 'vue';
-
-let links = reactive(['Home', 'Hire me', 'buy me stuff'])
-
-// Need to implement router for these buttons
-
+import {RouterLink} from 'vue-router'
+    // turn thesse into object with so we can link.name and link.url implement router
+let links = reactive([{'name': 'Home', 'path': '/home'}, {'name': 'Hire Me', 'path': '/hire-me'}, {'name': 'Donate', 'path': '/home'}])
 </script>
